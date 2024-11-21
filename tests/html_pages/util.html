@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test page for utilities.</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <script src="https://use.fontawesome.com/f45f749a67.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body onload="javascript:makeElementStale('tableId')">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 1</td>
+          <td>Value 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <table id="tableId">
+      <thead>
+        <tr>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

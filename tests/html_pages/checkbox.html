@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Checkbox</title>
+</head>
+<body>
+  <div>
+    <h2>Vehicles</h2>
+    <div id="results1"></div>
+
+    <input type="checkbox" name="vehicle" id="vehicle_1" value="Bike">
+    <label for="vehicle_1">Bike</label>
+    <br>
+
+    <input type="checkbox" name="vehicle" id="vehicle_2" value="Car" checked>
+    <label for="vehicle_2">Car</label>
+    <br>
+
+    <input type="checkbox" name="vehicle" id="vehicle_3" value="Caravan">
+    <label for="vehicle_3">Caravan</label>
+    <br>
+
+    <input type="button" onclick="submit('vehicle', 'results1')" value="Submit">
+  </div>
+
+  <div>
+    <h2>Assets</h2>
+    <div id="results2"></div>
+
+    <input type="checkbox" name="assets" id="assets_1" value="House" checked>
+    <label for="assets_1">House</label>
+    <br>
+
+    <input type="checkbox" name="assets" id="assets_2" value="Car">
+    <!-- This label contains new lines for testing purposes. -->
+    <label for="assets_2">
+      Car
+    </label>
+    <br>
+
+    <input type="button" onclick="submit('assets', 'results2')" value="Submit">
+  </div>
+
+  <div>
+    <h2>Do you agree?</h2>
+    <div id="results3"></div>
+
+    <input type="checkbox" name="agree" id="lone_checkbox" value="Yes">
+    <label for="lone_checkbox">Yes</label>
+    <br>
+
+    <input type="button" onclick="submit('agree', 'results3')" value="Submit">
+  </div>
+
+  <script type="text/javascript">
+    function submit(checkboxName, divId) {
+      var values = [];
+      var checkboxes = document.getElementsByName(checkboxName);
+
+      var count;
+      for (count = 0; count < checkboxes.length; count++) {
+        if (checkboxes[count].checked) {
+          values.push(checkboxes[count].value);
+        }
+      }
+
+      var output = 'Selected [' + values.join(', ') + ']';
+      document.getElementById(divId).innerText = output;
+    }
+  </script>
+</body>
+</html>

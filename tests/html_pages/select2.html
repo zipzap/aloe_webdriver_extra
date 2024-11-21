@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css"
+    rel="stylesheet"
+  />
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body onload="javascript:onReady()">
+
+  <div>
+    <label for="fruits">Fruits</label>
+    <div>
+      <select id="fruits" multiple="multiple" style="visibility: hidden;">
+        <option>Apple</option>
+        <option>Pineapple "2.0"</option>
+        <option>Mango</option>
+        <option>Cucumber</option>
+        <option>Custard apple</option>
+        <option>Damson</option>
+        <option>Date</option>
+        <option>Dragonfruit</option>
+        <option>Elderberry</option>
+        <option>Feijoa</option>
+        <option>Fig</option>
+      </select>
+    </div>
+
+    <br>
+    <label for="fruits2">More Fruits</label>
+    <select id="fruits2" multiple="multiple" size="1">
+      <option>Kiwi</option>
+      <option>Banana</option>
+      <option>Crab apples</option>
+    </select>
+    <br>
+
+    <label for="fruits3">Extra Fruits</label>
+    <select id="fruits3" multiple="multiple">
+      <option>Pomegranate</option>
+      <option>Tomato</option>
+      <option disabled="disabled">Durian</option>
+    </select>
+    <br>
+
+    <label for="fruits4">More Extra Fruits</label>
+    <select id="fruits4" style="visibility: hidden;">
+      <option label=" "></option>
+      <option>Pomegranate</option>
+      <option>Tomato</option>
+      <option disabled="disabled">Durian</option>
+      <option>Apricot</option>
+      <option>Avocado</option>
+      <option>Bilberry</option>
+      <option>Blackberry</option>
+      <option>Blackcurrant</option>
+      <option>Blueberry</option>
+      <option>Boysenberry</option>
+      <option>Crab apples</option>
+      <option>Currant</option>
+      <option>Cherry</option>
+      <option>Cherimoya</option>
+      <option>Cloudberry</option>
+      <option>Coconut</option>
+      <option>Cranberry</option>
+    </select>
+
+    <a class="btn button" href="javascript:toggle_disabled_fruits()">Toggle</a>
+  </div>
+
+  <a class="btn button" href="javascript:show_selected_values()">Submit</a>
+
+  <div>
+    <p id="result">Not submitted</p>
+  </div>
+
+  <script type="text/javascript">
+    var select2Options = {
+      placeholder: "please select",
+      selectOnClose: true,
+      dropdownAutoWidth: true,
+      width: '300px'
+    };
+
+    function onReady() {
+      $('select').select2(select2Options);
+
+      makeElementStale('fruits', 500, function () {
+        $('#fruits').select2('destroy');
+      },function () {
+        $('#fruits').select2(select2Options);
+      });
+    }
+
+    function show_selected_values() {
+      var result = 'No result';
+      var results = [];
+      var selects = ['#fruits', '#fruits2', '#fruits3', '#fruits4'];
+
+      selects.forEach(function (id) {
+        var values = $(id).val();
+
+        if (!Array.isArray(values)) {
+          values = [values];
+        }
+
+        results.push(values.join(','));
+      });
+
+      if (results.length > 0) {
+        result = results.join(':');
+      }
+
+      $('#result').text(result);
+    }
+
+    function toggle_disabled_fruits() {
+        $('#fruits4').find('option').each(function() {
+            $(this).prop('disabled', function(__, property) {
+                return !property;
+            });
+        })
+        $('#fruits4').select2(select2Options);
+    }
+  </script>
+</body>
+</html>

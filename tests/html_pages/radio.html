@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Radio</title>
+</head>
+<body>
+  <div>
+
+    <div id="result">
+
+    </div>
+
+    <ul style="display: block;">
+      <li>
+        <label for="radio_1">
+          <input name="radio_test" id="radio_1" type="radio"
+                 onchange="javascript:result('radio_1')">
+          First radio button
+        </label>
+      </li>
+      <li>
+        <input name="radio_test" id="radio_2" type="radio"
+          onchange="javascript:result('radio_2')" >
+        <label for="radio_2">Second radio button</label>
+      </li>
+      <li>
+        <label for="radio_3">
+          <input name="radio_test" id="radio_3" type="radio"
+                 onchange="javascript:result('radio_3')">
+          Third radio button
+        </label>
+      </li>
+    </ul>
+
+  </div>
+  <script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>

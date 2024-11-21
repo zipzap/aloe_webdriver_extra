@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <a href="static/csv_test.csv" download>Download</a>
+
+  <br>
+
+  <a href="javascript:delayLinkAction('static/csv_test.csv', 6000);">
+    Download with 6 second delay
+  </a>
+
+  <br>
+
+  <a href="javascript:delayLinkAction('static/csv_test.csv', 11000);">
+    Download with 11 second delay
+  </a>
+
+  <br>
+
+  <a href="javascript:delayLinkAction('static/csv_test.csv', 25000);">
+    Download with 25 second delay
+  </a>
+
+  <script>
+    function delayLinkAction(url, time) {
+      setTimeout(function() {
+        window.location = url;
+      }, time);
+    }
+  </script>
+</body>
+</html>

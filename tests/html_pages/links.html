@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test page for buttons.</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <script src="https://use.fontawesome.com/f45f749a67.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body onload="javascript:onReady()">
+  <p id="result">No results yet.</p>
+  <br>
+
+  <a href="javascript:reset();">
+    <span>Reset</span>
+  </a>
+
+  <hr>
+  <div class="action-box">
+    <ul>
+      <li>
+        <a href="javascript:result('link1')">
+          <span>Link 1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <br>
+
+  <hr>
+  <a href="javascript:result('link2_1')">Link 2</a>
+  <a href="javascript:result('link2_2')"> Link 2 </a>
+  <a href="javascript:result('link2_3')">
+    Link 2
+  </a>
+  <a href="javascript:result('link_3')"> Link&nbsp;3 </a>
+
+  <br>
+  <br>
+
+  <div id="wait_for"></div>
+  <br>
+  <br>
+
+  <div>
+    <a href="javascript:result('space_between_me')"> Spaces   between me </a>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <div role="navigation" class="sidebar">
+    <a aria-expanded="false"
+       data-activates="nav-mobile"
+       href="javascript:result('Menu clicked')">
+      <i tabindex="1" class="material-icons menu-icon">
+        <!--[if (gt IE 9) | (!IE)]><!-->menu<!--<![endif]-->
+        <!--[if lte IE 9]>&#xE5D2;<![endif]-->
+      </i>
+    </a>
+  </div>
+
+  <br>
+  <br>
+  <hr>
+  <a href="#anchor">Link to anchor</a>
+  <a href="https://www.google.com/doodles?q=interactive">Doodles</a>
+  <br>
+  <br>
+
+  <hr>
+  <a href="javascript:result('Unicode link clicked')">持続する »</a>
+
+  <hr>
+  <a href="javascript:result('Edit link clicked')" class="xh-highlight">
+    <i class="fa fa-paste"></i> Edit
+  </a>
+
+  <br>
+  <br>
+  <hr>
+  <p>This is not a link</p>
+</body>
+</html>

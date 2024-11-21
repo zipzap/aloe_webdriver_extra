@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form page</title>
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+  <p id="result">No results yet.</p>
+  <hr>
+  <br>
+
+  <form>
+    <h1>Input Fields</h1>
+
+    <label for="hidden_input_id">Hidden Input</label>
+    <input type="hidden" id="hidden_input_id" name="hidden_input_name" value="I'm a hidden input">
+    <br>
+
+    <label for="color_input_id">Color Input</label>
+    <input type="color" id="color_input_id" name="color_input_name" value="#AABBCC">
+    <br>
+
+    <label for="date_input_id">Date Input</label>
+    <input type="date" id="date_input_id" name="date_input_name" value="1979-12-31">
+    <br>
+
+    <label for="datetime_input_id">Datetime Input</label>
+    <input type="datetime" id="datetime_input_id" name="datetime_input_name" value="2017-03-18T04:45" >
+    <br>
+
+    <label for="datetime-local_input_id">Datetime-local Input</label>
+    <input type="datetime-local" id="datetime-local_input_id" name="datetime-local_input_name" value="2017-03-18T23:21">
+    <br>
+
+    <label for="email_input_id">Email Input</label>
+    <input type="email" id="email_input_id" name="email_input_name" value="example@email.com">
+    <br>
+
+    <label for="file_input_id">File Input</label>
+    <input type="file" id="file_input_id" name="file_input_name" value="C:\fakepath\document.doc">
+    <br>
+
+    <label for="image_input_id">Image Input</label>
+    <input type="image" id="image_input_id" name="image_input_name" value="C:\fakepath\image.png">
+    <br>
+
+    <label for="month_input_id">Month Input</label>
+    <input type="month" id="month_input_id" name="month_input_name" value="2015-01">
+    <br>
+
+    <label for="number_input_id">Number Input</label>
+    <input type="number" id="number_input_id" name="number_input_name" value="12345">
+    <br>
+
+    <label for="password_input_id">Password Input</label>
+    <input type="password" id="password_input_id" name="password_input_name" value="password">
+    <br>
+
+    <label for="range_input_id">Range Input</label>
+    <input type="range" id="range_input_id" name="range_input_name" value="18">
+    <br>
+
+    <label for="search_input_id">Search Input</label>
+    <input type="search" id="search_input_id" name="search_input_name" value="searching">
+    <br>
+
+    <label for="tel_input_id">Tel Input</label>
+    <input type="tel" id="tel_input_id" name="tel_input_name" value="987654321">
+    <br>
+
+    <label for="text_input_id">Text Input</label>
+    <input type="text" id="text_input_id" name="text_input_name" value="string">
+    <br>
+
+    <label for="text_input2_id">Text Input</label>
+    <input id="text_input2_id" name="text_input2_name" value="string2">
+    <br>
+
+    <label for="time_input_id">Time Input</label>
+    <input type="time" id="time_input_id" name="time_input_name" value="05:07">
+    <br>
+
+    <label for="url_input_id">URL Input</label>
+    <input type="url" id="url_input_id" name="url_input_name" value="http://aloe.com/">
+    <br>
+
+    <label for="week_input_id">Week Input</label>
+    <input type="week" id="week_input_id" name="week_input_name" value="2017-W10">
+    <br>
+
+    <label for="textarea_box">Test textarea</label>
+    <textarea id="textarea_box">Some text</textarea>
+    <br>
+
+    <hr>
+    <h1>Buttons</h1>
+    <input type="button" id="button1" value="Normal button">
+    <button id="button2">HTML5 button</button>
+    <br>
+
+    <hr>
+    <h1>Select Boxes</h1>
+    <label for="select1">Select Example 1</label>
+    <select id="select1" onchange="javascript:result(this.value);">
+      <option value="">Select an option</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+    </select>
+    <br>
+
+    <label for="select2">Select Example 2</label>
+    <select id="select2" onchange="javascript:result(this.value);">
+      <option value="">Select an option</option>
+      <option value="option2_1">Option2 1</option>
+      <option value="option2_2">Option2 2</option>
+    </select>
+    <br>
+
+    <label for="select3">Select Example 2</label>
+    <select id="select3" onchange="javascript:result(this.value);">
+      <option value="">Select an option</option>
+      <option value="option2_1">Option2 1</option>
+      <option value="option2_2">Option2 2</option>
+    </select>
+  </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+person,age,favourite food,is_ok
+bob,50,fried rice,true
+lisa,25,steamed rice,true
+dan,33,,false
+null,null,null,null

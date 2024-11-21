@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image test</title>
+</head>
+<body>
+  <h1>Test steps related with images</h1>
+  <br>
+
+  <a onclick="javascript:result('Image clicked')">
+    <img src="images/play.png" alt="Alternate text" style="width:100px;">
+  </a>
+
+  <a onclick="javascript:result('First image clicked')">
+    <img src="images/testing_in_progress.gif"
+         alt="Alternate text"
+         style="width:80px;">
+  </a>
+  <img src="images/testing_in_progress.gif"
+       alt="Alternate text"
+       style="width:70px;">
+  <a onclick="javascript:result('Third image clicked')">
+    <img src="images/testing_in_progress.gif"
+         alt="Alternate text"
+         style="width:60px;">
+  </a>
+
+  <!-- Hidden images -->
+  <img src="images/roundedL.png" alt="Alternate text" style="display: none;">
+  <img src="images/roundedR.png"
+       alt="Alternate text"
+       style="visibility: hidden;">
+  <!-- End hidden images -->
+
+  <br>
+  <button type="button" onclick="javascript:result('')">Clear</button>
+
+  <div id="result"></div>
+
+  <script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>
